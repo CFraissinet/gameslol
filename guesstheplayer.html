@@ -20,20 +20,24 @@
                     <div>
                         <h3 id ="Nom Ligue">LEC</h3>
                     </div>
-                    <div>
-                        <h3>Image Joueur</h3>
+                    <div class="text-center">
+                        <img src="https://images-ext-1.discordapp.net/external/Bh4FyjepztEzOWtlXnjVVXui5fOojbYcrYwvn6f4fZ0/https/www.unamur.be/sciences/chimie/cbo/members/membres-fichiers/anonymity.jpg/image?width=703&height=701" alt="" id="imagePlayer">
                     </div>
                     <div>
                         <h3>Liste des Equipes</h3>
                     </div>
                     <div>
-                        <h3 id="joueur">Nom Joueur</h3>
+                        <h3 id="namePlayer">
+                            <div class="spinner-border" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </h3>
 
                     </div>
                     <div>
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="verifPlayer()">Button</button>
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" id="searchInput">
+                            <button class="btn btn-outline-secondary" type="button" id="button-addon2" >Button</button>
                         </div>
                     </div>
                 </div>
@@ -43,9 +47,7 @@
 
             </div>
         </div>
-        <script> 
-            const joueur = document.getElementById('joueur');
-        </script>
+        
 
         <script src = "main.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>

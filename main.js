@@ -1,9 +1,25 @@
+let summonerName;
+let imgName;
+
+document.getElementById("button-addon2").addEventListener("click",function() {
+  let guess = document.getElementById("searchInput").value;
+  if(guess===summonerName){
+    console.log("Bonne reponse"); 
+    
+  }else{
+    console.log("Mauvaise reponse"); 
+  }
+  
+  
+})
+
+
 const url ='https://api-esportplayers.vercel.app/randomTeamByLeague/LEC'
 fetch(url)
 .then(reponse=>reponse.json())
 .then(data=>{
     console.log(data);
-    console.log(randomPlayer(data));
+    randomPlayer(data);
 })
 .catch(error => {
     console.log(error);
@@ -19,22 +35,14 @@ function findPlayer(data,name){
 
 function randomPlayer(data){
 
-  let numPlayer = Math.floor(Math.random() * (data.team.players.length - 0 + 1)) + 0;
-  return data.team.players[numPlayer].summonerName;
+  let numPlayer = Math.floor(Math.random() * (data.team.players.length ));
+  console.log(numPlayer);
+  /*let imagePlayer = document.createElement("img")
+  
+  imagePlayer.src = data.team.players[numPlayer].image;*/
+  summonerName = data.team.players[numPlayer].summonerName;
+  imgName = data.team.players[numPlayer].image;
+  document.getElementById("namePlayer").textContent = summonerName;
+  document.getElementById("imagePlayer").src = imgName;
  
 }
-
-function verifPlayer (data,reponse,name){
-  if(document.getElementById('joueur')===randomPlayer(data)){
-    return "Bonne reponse"
-  }else{
-    return "Mauvaise Reponse"
-  }
-}
-
-/* 
-fetch random team 
-prendre la taille data.players
-generer un chiffre aléatoire entre 0 et la taille tableau au dessus
-faire un console log data.player[chiffre aléatoire]
-*/
