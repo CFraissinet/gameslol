@@ -3,18 +3,9 @@ let imgName;
 let nameTeam;
 let rolePlayer;
 let numPlayer;
+let reponse;
+let nombreVie = 3;
 
-document.getElementById("button-addon2").addEventListener("click",function() {
-  let guess = document.getElementById("searchInput").value;
-  if(guess===summonerName){
-    console.log("Bonne reponse"); 
-    
-  }else{
-    console.log("Mauvaise reponse"); 
-  }
-  
-  
-})
 
 
 const url ='https://api-esportplayers.vercel.app/randomTeamByLeague/LEC'
@@ -25,10 +16,26 @@ fetch(url)
     randomPlayer(data);
     afficherTeam(data);
     afficherRole(data);
+    afficherVie(data);
+    //afficherIndices(data);
   })
 .catch(error => {
     console.log(error);
 })
+
+
+document.getElementById("button-addon2").addEventListener("click",function() {
+  let guess = document.getElementById("searchInput").value;
+  if(guess===summonerName){
+    console.log("Bonne reponse"); 
+  }else{
+    console.log("Mauvaise reponse");
+    nombreVie = nombreVie - 1;
+    afficherTeam();
+    afficherVie();
+  }
+})
+
 
 function findPlayer(data,name){
   for(let i=0; i<data.teams.length;i++){
@@ -62,6 +69,10 @@ function afficherRole(data){
   document.getElementById("poste").textContent = rolePlayer;
 }
 
-function afficherIndices (data){
-  
+function afficherVie(data){
+  document.getElementById("nombreVie").textContent = nombreVie;
 }
+
+//Todo Gerer la baisse du nbr de vie en fonction des reponses et l'affichage d'indices lors d'une mauvaise reponse
+
+
