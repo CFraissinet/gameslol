@@ -1,5 +1,8 @@
 let summonerName;
 let imgName;
+let nameTeam;
+let rolePlayer;
+let numPlayer;
 
 document.getElementById("button-addon2").addEventListener("click",function() {
   let guess = document.getElementById("searchInput").value;
@@ -20,7 +23,9 @@ fetch(url)
 .then(data=>{
     console.log(data);
     randomPlayer(data);
-})
+    afficherTeam(data);
+    afficherRole(data);
+  })
 .catch(error => {
     console.log(error);
 })
@@ -35,7 +40,7 @@ function findPlayer(data,name){
 
 function randomPlayer(data){
 
-  let numPlayer = Math.floor(Math.random() * (data.team.players.length ));
+  numPlayer = Math.floor(Math.random() * (data.team.players.length ));
   console.log(numPlayer);
   /*let imagePlayer = document.createElement("img")
   
@@ -45,4 +50,14 @@ function randomPlayer(data){
   document.getElementById("namePlayer").textContent = summonerName;
   document.getElementById("imagePlayer").src = imgName;
  
+}
+
+function afficherTeam(data){
+  nameTeam = data.team.code;
+  document.getElementById("nameTeam").textContent = nameTeam;
+}
+
+function afficherRole(data){
+  rolePlayer = data.team.players[numPlayer].role;
+  document.getElementById("poste").textContent = rolePlayer;
 }
