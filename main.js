@@ -61,3 +61,7 @@ function afficherRole(data){
   rolePlayer = data.team.players[numPlayer].role;
   document.getElementById("poste").textContent = rolePlayer;
 }
+
+function afficherIndices (data){
+  
+}
