@@ -5,6 +5,7 @@ let rolePlayer;
 let numPlayer;
 let reponse;
 let nombreVie = 3;
+let allInfo;
 
 
 
@@ -12,11 +13,12 @@ const url ='https://api-esportplayers.vercel.app/randomTeamByLeague/LEC'
 fetch(url)
 .then(reponse=>reponse.json())
 .then(data=>{
-    console.log(data);
+    allInfo = data;
     randomPlayer(data);
-    afficherTeam(data);
-    afficherRole(data);
     afficherVie(data);
+    //afficherTeam(data);
+    //afficherRole(data);
+    //afficherVie(data);
     //afficherIndices(data);
   })
 .catch(error => {
@@ -31,8 +33,8 @@ document.getElementById("button-addon2").addEventListener("click",function() {
   }else{
     console.log("Mauvaise reponse");
     nombreVie = nombreVie - 1;
-    afficherTeam();
-    afficherVie();
+    afficherTeam(allInfo);
+    afficherVie(allInfo);
   }
 })
 
@@ -73,6 +75,6 @@ function afficherVie(data){
   document.getElementById("nombreVie").textContent = nombreVie;
 }
 
-//Todo Gerer la baisse du nbr de vie en fonction des reponses et l'affichage d'indices lors d'une mauvaise reponse
+//Todo Gerer les indices avec les vies + condition de fin quand vie =0
 
 
