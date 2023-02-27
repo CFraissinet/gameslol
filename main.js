@@ -31,10 +31,15 @@ document.getElementById("button-addon2").addEventListener("click",function() {
   if(guess===summonerName){
     console.log("Bonne reponse"); 
   }else{
-    console.log("Mauvaise reponse");
-    nombreVie = nombreVie - 1;
-    afficherTeam(allInfo);
-    afficherVie(allInfo);
+    if (nombreVie>0){
+      console.log("Mauvaise reponse");
+      nombreVie = nombreVie - 1;
+      afficherTeam(allInfo);
+      afficherVie(allInfo);
+    }else{
+      alert("Vous avez perdu.")
+    }
+
   }
 })
 
@@ -73,6 +78,12 @@ function afficherRole(data){
 
 function afficherVie(data){
   document.getElementById("nombreVie").textContent = nombreVie;
+}
+
+function finPartie(){
+  if(nombreVie===0){
+
+  }
 }
 
 //Todo Gerer les indices avec les vies + condition de fin quand vie =0
