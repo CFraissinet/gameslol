@@ -6,6 +6,7 @@ let numPlayer;
 let reponse;
 let nombreVie = 3;
 let allInfo;
+let namePlayer;
 
 
 
@@ -29,13 +30,17 @@ fetch(url)
 document.getElementById("button-addon2").addEventListener("click",function() {
   let guess = document.getElementById("searchInput").value;
   if(guess===summonerName){
-    console.log("Bonne reponse"); 
+    console.log("Bonne reponse");
+    namePlayer= document.getElementById("namePlayer");
+    namePlayer.setAttribute("style","opacity: 1");
+
   }else{
     if (nombreVie>0){
       console.log("Mauvaise reponse");
       nombreVie = nombreVie - 1;
       afficherTeam(allInfo);
       afficherVie(allInfo);
+      
     }else{
       alert("Vous avez perdu.")
     }
@@ -68,6 +73,10 @@ function randomPlayer(data){
 
 function afficherTeam(data){
   nameTeam = data.team.code;
+  /*const newh3 = document.createElement("h3");
+  const newContent = document.createTextNode("Equipe :");
+  newh3.appendChild(newContent);
+  const currentH3 = document.getElementById("nameTeam");*/
   document.getElementById("nameTeam").textContent = nameTeam;
 }
 
@@ -78,12 +87,6 @@ function afficherRole(data){
 
 function afficherVie(data){
   document.getElementById("nombreVie").textContent = nombreVie;
-}
-
-function finPartie(){
-  if(nombreVie===0){
-
-  }
 }
 
 //Todo Gerer les indices avec les vies + condition de fin quand vie =0
