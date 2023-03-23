@@ -19,4 +19,20 @@ h3{
 
 #namePlayer{
     opacity: 0;
+    margin-top: 25px;
+}
+
+#score{
+    text-align: center;
+}
+
+#positionVie {
+    display: flex;
+}
+
+#positionVie img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    color: red;
 }

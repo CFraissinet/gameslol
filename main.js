@@ -4,6 +4,7 @@ let nameTeam;
 let rolePlayer;
 let numPlayer;
 let reponse;
+let imgVie;
 let nombreVie = 3;
 let allInfo;
 let namePlayer;
@@ -86,9 +87,17 @@ function afficherRole(data){
 }
 
 function afficherVie(data){
-  document.getElementById("nombreVie").textContent = nombreVie;
+  imgVie = document.getElementById("nombreVie");
+  
+  for (let i =0;i<nombreVie;i++){
+      let imageCoeur = document.createElement("img");
+      imageCoeur.src="/images/coeur.svg";
+      document.body.appendChild(imageCoeur);
+      imgVie.appendChild = imageCoeur;
+      
+  }
 }
-
+//placer les coueurs dans la partie positionVie
 //Todo Gerer les indices avec les vies + condition de fin quand vie =0
 
 
