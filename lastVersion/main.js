@@ -88,7 +88,7 @@ function afficherRole(data){
 
 function afficherVie(data){
   imgVie = document.getElementById("nombreVie");
-  
+  imgVie.innerHTML="";
   for (let i =0;i<nombreVie;i++){
       let imageCoeur = document.createElement("img");
       imageCoeur.src="/images/coeur.svg";
