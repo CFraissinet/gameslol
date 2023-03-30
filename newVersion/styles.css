@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('../images/background.jpg');
+    color: #EECF34;
+}
+
+#container{
+    display:flex;
+    height: 100vh;
+    width: 100vw;
+}
+#header{
+    display: flex;
+    height: 15vh;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: #EECF34;
+
+}
+.titre{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.connect{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    
+}
+
+.connect a{
+    color: #EECF34;
+    text-decoration: none;
+}
+#signUp{
+    margin-left: 1%;
+    margin-right: 2%;
+    width: 10%;
+    height: 10%;
+}
+
+#signIn{
+    width: 10%;
+    height: 10%;
+}
+
+#vide , .connect {
+    flex:1
+}
