@@ -61,9 +61,10 @@ h1{
 
 
 #contain{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    width: 100%;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #titreMiniJeu{
@@ -76,18 +77,45 @@ h1{
 
 }
 
-.miniJeu{
-   
-}
 
-#col{
+
+.col{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 }
 
 img {
     width : 150px;
     height : 150px;
     }
+
+#sousContain{
+   margin-top: 20px;
+   display: flex;
+    align-items: flex-start;
+   width: 100%;
+}
+#sousContain > div {
+    flex-grow: 1;
+}
+
+#namePlayer{
+    display: none;
+}
+/* .col{
+    display: flex;
+    margin-left: 200px;
+} */
+
+/* #searchPlayer{
+    margin-top: 15px;
+} */
+
+#inputName{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
