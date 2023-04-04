@@ -1,12 +1,13 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('../images/background.jpg');
+    background-image: url('/images/background.jpg');
     color: #EECF34;
 }
 
 #container{
     display:flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
 }
@@ -36,6 +37,7 @@ h1{
     
 }
 
+
 .connect a{
     color: #EECF34;
     text-decoration: none;
@@ -55,3 +57,37 @@ h1{
 #vide , .connect {
     flex:1
 }
+
+
+
+#contain{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#titreMiniJeu{
+    display:flex;
+    margin-top:10%;
+    justify-content: center;
+    align-items: center;
+    gap:300px
+
+
+}
+
+.miniJeu{
+   
+}
+
+#col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width : 150px;
+    height : 150px;
+    }
