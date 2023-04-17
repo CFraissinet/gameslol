@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Games LoL</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <div id="container">
-        <div id="header">
-                <div id="vide"></div>
-                <h1 id="titre">GAMES LOL</h1>
-                <div class="connect">
-                    <a href="#" id="signIn">Sign in</a>
-                    <a href="#" id="signUp">Sign up</a>
-                </div>
+      <div id="header">
+        <div id="vide"></div>
+        <h1 id="titre">GAMES LOL</h1>
+        <div class="connect">
+          <a href="#" id="signIn">Sign in</a>
+          <a href="#" id="signUp">Sign up</a>
         </div>
-        <div id="contain">
-                    <h2>GuessThePlayer</h2>
-                <div id="sousContain">
-                        <div class="col one">
-                            <h3>Nbr de Vies: </h3>
-                        </div>
-                        <div class ="col two">
-                            <h3 id="liguePlayer">Ligue</h3>
-                            <img src="https://images-ext-1.discordapp.net/external/Bh4FyjepztEzOWtlXnjVVXui5fOojbYcrYwvn6f4fZ0/https/www.unamur.be/sciences/chimie/cbo/members/membres-fichiers/anonymity.jpg/image?width=703&height=701" alt="imgPlayer" id="imgPlayer">
-                            <h3 id="namePlayer">NomPlayer</h3>
-                            <div id="inputName">
-                                <input id="searchPlayer" type="text" placeholder="Name Player" />
-                                <button class="btn btn-primary" id="validInput" type="submit">Button</button>
-                            </div>
-                            
-
-                        </div>
-                        <div class="col three">
-                            <h3>Indices</h3>
-                        </div>
-                </div>
+      </div>
+      <div id="contain">
+        <h2>GuessThePlayer</h2>
+        <div id="sousContain">
+          <div class="col one">
+            <h3>Nbr de Vies:</h3>
+            <div id="nbCoeur">
+              <!-- <i class="fa-solid fa-heart" style="color: #f7021b"></i> -->
+            </div>
+          </div>
+          <div class="col two">
+            <h3 id="liguePlayer">Ligue</h3>
+            <img
+              src="https://images-ext-1.discordapp.net/external/Bh4FyjepztEzOWtlXnjVVXui5fOojbYcrYwvn6f4fZ0/https/www.unamur.be/sciences/chimie/cbo/members/membres-fichiers/anonymity.jpg/image?width=703&height=701"
+              alt="imgPlayer"
+              id="imgPlayer"
+            />
+            <h3 id="namePlayer"></h3>
+            <div id="inputName">
+              <input id="searchPlayer" type="text" placeholder="Name Player" />
+              <button class="btn btn-primary" id="validInput" type="submit">
+                Button
+              </button>
+            </div>
+          </div>
+          <div class="col three">
+            <h3>Indices</h3>
+          </div>
         </div>
+      </div>
     </div>
-    <script src = "main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-</body>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
